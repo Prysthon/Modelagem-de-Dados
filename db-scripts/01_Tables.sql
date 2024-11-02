@@ -86,6 +86,7 @@ CREATE TABLE Agendamento (
   id_Profissional INT,
   data_Agendamento DATETIME NOT NULL,
   Preco INT NOT NULL,
+  status_Agendamento VARCHAR(250) NOT NULL,
   FOREIGN KEY (id_Cliente) REFERENCES Cliente(id_Cliente),
   FOREIGN KEY (id_Profissional) REFERENCES Profissional(id_Profissional)
 );
@@ -114,4 +115,20 @@ CREATE TABLE Avaliacao (
   Descricao VARCHAR(250) NOT NULL,
   FOREIGN KEY (id_TP_Avaliacao) REFERENCES TP_Avaliacao(id_TP_Avaliacao),
   FOREIGN KEY (id_Atendimento) REFERENCES Atendimento(id_Atendimento)
+);
+
+CREATE TABLE Pagamento (
+  id_Pagamento INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
+  id_Agendamento INT,
+  id_Atendimento INT,
+  id_Cliente INT NOT NULL,
+  data_Agendamento DATETIME,
+  status_Pagamento VARCHAR(250) NOT NULL,
+  valor_Total INT NOT NULL,
+  data_Transacao DATETIME,
+  status_Transacao VARCHAR(250) NOT NULL,
+
+  FOREIGN KEY (id_Agendamento) REFERENCES Agendamento(id_Agendamento),
+  FOREIGN KEY (id_Atendimento) REFERENCES Atendimento(id_Atendimento),
+  FOREIGN KEY (id_Cliente) REFERENCES Cliente(id_Cliente)
 );
