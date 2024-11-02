@@ -59,6 +59,7 @@ INSERT INTO Credencial (Credencial) VALUES
 ('COREN'),
 ('CREFITO');
 
+
 -- Inserindo dados na tabela Profissional_Credencial
 INSERT INTO Profissional_Credencial (id_Profissional, id_Credencial, Codigo) VALUES
 (1, 1, 'CRM12345'),
@@ -87,6 +88,8 @@ INSERT INTO Cliente (id_Usuario, Data_Admissao_Cliente) VALUES
 (8, '2021-08-10'),
 (9, '2021-09-10'),
 (10, '2021-10-10');
+
+
 
 -- Inserindo dados na tabela Agendamento
 -- Inserindo dados na tabela Agendamento com o campo status_Agendamento
@@ -155,14 +158,20 @@ INSERT INTO Avaliacao (id_TP_Avaliacao, id_Atendimento, Descricao) VALUES
 (3, 13, 'Pouca atenção ao detalhe, deixou a desejar.');
 
 
---Novas inserções 
--- Novos clientes (somente clientes, sem vínculo com a tabela Profissional)
-INSERT INTO Cliente (id_Usuario, Data_Admissao_Cliente) VALUES
-(6, '2021-06-10'),
-(7, '2021-07-10'),
-(8, '2021-08-10'),
-(9, '2021-09-10'),
-(10, '2021-10-10');
+INSERT INTO Pagamento (id_Agendamento, id_Atendimento, id_Cliente, data_Agendamento, status_Pagamento, valor_Total, data_Transacao, status_Transacao) VALUES
+    (1, 1, 1, '2021-06-01 09:00:00', 'Pago', 100, '2021-06-01 09:35:00', 'Processada'),
+    (2, 2, 2, '2021-06-02 10:00:00', 'Pendente', 150, NULL, 'Nao Processada'),
+    (3, 3, 3, '2021-06-03 11:00:00', 'Pago', 200, '2021-06-03 11:45:00', 'Processada'),
+    (4, 4, 4, '2021-06-04 12:00:00', 'Cancelado', 250, NULL, 'Nao Processada'),
+    (5, 5, 5, '2021-06-05 13:00:00', 'Pago', 300, '2021-06-05 13:45:00', 'Processada'),
+    (6, 6, 6, '2021-07-01 09:00:00', 'Pago', 120, '2021-07-01 09:45:00', 'Processada'),
+    (7, 7, 7, '2021-08-02 10:00:00', 'Pendente', 160, NULL, 'Nao Processada'),
+    (8, 8, 8, '2021-09-03 11:00:00', 'Pago', 220, '2021-09-03 11:45:00', 'Processada'),
+    (9, 9, 9, '2021-10-04 12:00:00', 'Pendente', 180, NULL, 'Nao Processada'),
+    (10, 10, 10, '2021-11-05 13:00:00', 'Cancelado', 130, NULL, 'Nao Processada'),
+    (11, 11, 6, '2021-12-06 09:00:00', 'Pago', 140, '2021-12-06 09:45:00', 'Processada'),
+    (12, 12, 7, '2021-11-07 10:00:00', 'Pendente', 150, NULL, 'Nao Processada'),
+    (13, 13, 8, '2021-10-08 11:00:00', 'Pago', 175, '2021-10-08 11:45:00', 'Processada');
 
 
 

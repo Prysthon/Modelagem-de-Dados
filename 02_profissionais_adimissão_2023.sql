@@ -19,3 +19,4 @@ WHERE
             ag.id_Profissional = p.id_Profissional
             AND YEAR(at.data_Atendimento) >= @ano_inicial
     );
+
