@@ -36,6 +36,9 @@ INSERT INTO Usuario (Nome, CPF, Data_Nascimento) VALUES
 ('Isabela Martins', '88990011223', '1995-06-18'),
 ('André Gonçalves', '99001122334', '1985-07-19'),
 ('Camila Costa', '10111213141', '1996-08-20');
+('Eduardo Silva', '11122233344', '1985-05-05'),
+('Mariana Oliveira', '22233344455', '1990-06-06'),
+('Bruna Santos', '33344455566', '1992-07-07');
 
 -- Inserindo dados na tabela Endereco
 INSERT INTO Endereco (id_Cidade, CEP, Bairro, Rua, Numero, Complemento, id_Usuario) VALUES
@@ -54,6 +57,9 @@ INSERT INTO Endereco (id_Cidade, CEP, Bairro, Rua, Numero, Complemento, id_Usuar
 (3, 88088000, 'Funcionários', 'Rua K', 1300, NULL, 18),
 (4, 99099000, 'Ondina', 'Rua L', 1400, 'Casa', 19),
 (5, 10101000, 'Boa Vista', 'Rua M', 1500, NULL, 20);
+(1, 11223344, 'Centro', 'Rua N', 1600, 'Apto 1601', 21),
+(2, 22334455, 'Jardim', 'Rua O', 1700, 'Casa', 22),
+(3, 33445566, 'Bairro Novo', 'Rua P', 1800, 'Apto 1802', 23);
 
 -- Inserindo dados na tabela Telefone
 INSERT INTO Telefone (Numero, id_Usuario) VALUES
@@ -72,6 +78,9 @@ INSERT INTO Telefone (Numero, id_Usuario) VALUES
 (151515151, 18),
 (161616161, 19),
 (171717171, 20);
+(181818181, 21),
+(191919191, 22),
+(202020202, 23);
 
 -- Inserindo dados na tabela Profissional
 INSERT INTO Profissional (id_Usuario, Data_Admissao_Profissional) VALUES
@@ -85,6 +94,9 @@ INSERT INTO Profissional (id_Usuario, Data_Admissao_Profissional) VALUES
 (13, '2020-08-01'),
 (14, '2020-09-01'),
 (15, '2020-10-01');
+(21, '2022-01-15'),
+(22, '2022-02-15'),
+(23, '2022-03-15');
 
 -- Inserindo dados na tabela Credencial
 INSERT INTO Credencial (Credencial) VALUES
@@ -111,6 +123,9 @@ INSERT INTO Profissional_Credencial (id_Profissional, id_Credencial, Codigo) VAL
 (8, 8, 'CRA89012'),
 (9, 9, 'CORECON90123'),
 (10, 10, 'CREA01234');
+(16, 1, 'CRM98765'),
+(17, 2, 'CRO87654'),
+(18, 3, 'CRP76543');
 
 -- Inserindo dados na tabela TP_Avaliacao
 INSERT INTO TP_Avaliacao (Descricao) VALUES
