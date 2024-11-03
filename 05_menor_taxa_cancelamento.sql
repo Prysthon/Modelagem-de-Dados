@@ -1,19 +1,18 @@
--- Consulta para calcular a taxa de cancelamento de agendamentos por profissional
-SELECT
-    p.id_Profissional AS id_profissional,
-    u.Nome AS nome,
+SELECT 
+    p.id_Profissional, 
+    u.nome AS Nome,
     COUNT(a.id_Agendamento) AS total_agendamentos,
-    SUM(CASE WHEN a.Cancelado = TRUE THEN 1 ELSE 0 END) AS total_cancelamentos,
-    ROUND(
-        (SUM(CASE WHEN a.Cancelado = TRUE THEN 1 ELSE 0 END) / COUNT(a.id_Agendamento)) * 100,
-        2
-    ) AS taxa_cancelamento
-FROM
-    Profissional p
-    INNER JOIN Usuario u ON p.id_Usuario = u.id_Usuario
-    INNER JOIN Agendamento a ON p.id_Profissional = a.id_Profissional
-GROUP BY
-    p.id_Profissional,
-    u.Nome
-ORDER BY
+    SUM(CASE WHEN a.status_Agendamento = 'Cancelado' THEN 1 ELSE 0 END) AS total_cancelamentos,
+    (SUM(CASE WHEN a.status_Agendamento = 'Cancelado' THEN 1 ELSE 0 END) / COUNT(a.id_Agendamento) * 100) AS taxa_cancelamento
+FROM 
+    Profissional AS p
+JOIN 
+    Agendamento AS a ON p.id_Profissional = a.id_Profissional
+JOIN
+    Usuario as u ON p.id_Usuario = u.id_Usuario
+GROUP BY 
+    p.id_Profissional
+HAVING
+    taxa_cancelamento > 0
+ORDER BY 
     taxa_cancelamento ASC;
