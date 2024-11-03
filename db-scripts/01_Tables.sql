@@ -46,6 +46,7 @@ CREATE TABLE Profissional (
   id_Profissional INT AUTO_INCREMENT PRIMARY KEY UNIQUE,
   id_Usuario INT,
   Data_Admissao_Profissional DATE NOT NULL,
+  destaque BOOLEAN DEFAULT FALSE,
   FOREIGN KEY (id_Usuario) REFERENCES Usuario(id_Usuario)
 );
 
