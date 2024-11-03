@@ -25,7 +25,17 @@ INSERT INTO Usuario (Nome, CPF, Data_Nascimento) VALUES
 ('Fernanda Almeida', '78901234567', '1992-07-07'),
 ('Gabriel Santos', '89012345678', '1987-08-08'),
 ('Juliana Souza', '90123456789', '1986-09-09'),
-('Aline Rocha', '01234567890', '1994-10-10');
+('Aline Rocha', '01234567890', '1994-10-10'),
+('Marcelo Dias', '11223344556', '1981-11-11'),
+('Paula Fernandes', '22334455667', '1991-12-12'),
+('Bruno Castro', '33445566778', '1982-01-13'),
+('Sofia Mendes', '44556677889', '1993-02-14'),
+('Ricardo Alves', '55667788990', '1983-03-15'),
+('Laura Ribeiro', '66778899001', '1994-04-16'),
+('Felipe Oliveira', '77889900112', '1984-05-17'),
+('Isabela Martins', '88990011223', '1995-06-18'),
+('André Gonçalves', '99001122334', '1985-07-19'),
+('Camila Costa', '10111213141', '1996-08-20');
 
 -- Inserindo dados na tabela Endereco
 INSERT INTO Endereco (id_Cidade, CEP, Bairro, Rua, Numero, Complemento, id_Usuario) VALUES
@@ -33,7 +43,17 @@ INSERT INTO Endereco (id_Cidade, CEP, Bairro, Rua, Numero, Complemento, id_Usuar
 (2, 20020020, 'Copacabana', 'Av. Atlântica', 200, 'Apto 202', 2),
 (3, 30130030, 'Savassi', 'Rua B', 300, NULL, 3),
 (4, 40040040, 'Pelourinho', 'Rua C', 400, 'Casa', 4),
-(5, 50050050, 'Moinhos de Vento', 'Rua D', 500, NULL, 5);
+(5, 50050050, 'Moinhos de Vento', 'Rua D', 500, NULL, 5),
+(1, 11011000, 'Centro', 'Rua E', 600, 'Apto 601', 11),
+(2, 22022000, 'Botafogo', 'Rua F', 700, 'Apto 702', 12),
+(3, 33033000, 'Lourdes', 'Rua G', 800, NULL, 13),
+(4, 44044000, 'Barra', 'Rua H', 900, 'Casa', 14),
+(5, 55055000, 'Petrópolis', 'Rua I', 1000, NULL, 15),
+(1, 66066000, 'Moema', 'Rua J', 1100, 'Apto 1101', 16),
+(2, 77077000, 'Leblon', 'Av. Delfim Moreira', 1200, 'Apto 1202', 17),
+(3, 88088000, 'Funcionários', 'Rua K', 1300, NULL, 18),
+(4, 99099000, 'Ondina', 'Rua L', 1400, 'Casa', 19),
+(5, 10101000, 'Boa Vista', 'Rua M', 1500, NULL, 20);
 
 -- Inserindo dados na tabela Telefone
 INSERT INTO Telefone (Numero, id_Usuario) VALUES
@@ -41,7 +61,17 @@ INSERT INTO Telefone (Numero, id_Usuario) VALUES
 (222222222, 2),
 (333333333, 3),
 (444444444, 4),
-(555555555, 5);
+(555555555, 5),
+(666666666, 11),
+(777777777, 12),
+(888888888, 13),
+(999999999, 14),
+(121212121, 15),
+(131313131, 16),
+(141414141, 17),
+(151515151, 18),
+(161616161, 19),
+(171717171, 20);
 
 -- Inserindo dados na tabela Profissional
 INSERT INTO Profissional (id_Usuario, Data_Admissao_Profissional) VALUES
@@ -49,7 +79,12 @@ INSERT INTO Profissional (id_Usuario, Data_Admissao_Profissional) VALUES
 (2, '2020-02-15'),
 (3, '2020-03-15'),
 (4, '2020-04-15'),
-(5, '2020-05-15');
+(5, '2020-05-15'),
+(11, '2020-06-01'),
+(12, '2020-07-01'),
+(13, '2020-08-01'),
+(14, '2020-09-01'),
+(15, '2020-10-01');
 
 -- Inserindo dados na tabela Credencial
 INSERT INTO Credencial (Credencial) VALUES
@@ -57,8 +92,12 @@ INSERT INTO Credencial (Credencial) VALUES
 ('CRO'),
 ('CRP'),
 ('COREN'),
-('CREFITO');
-
+('CREFITO'),
+('CRN'),
+('CREF'),
+('CRA'),
+('CORECON'),
+('CREA');
 
 -- Inserindo dados na tabela Profissional_Credencial
 INSERT INTO Profissional_Credencial (id_Profissional, id_Credencial, Codigo) VALUES
@@ -66,7 +105,12 @@ INSERT INTO Profissional_Credencial (id_Profissional, id_Credencial, Codigo) VAL
 (2, 2, 'CRO23456'),
 (3, 3, 'CRP34567'),
 (4, 4, 'COREN45678'),
-(5, 5, 'CREFITO56789');
+(5, 5, 'CREFITO56789'),
+(6, 6, 'CRN67890'),
+(7, 7, 'CREF78901'),
+(8, 8, 'CRA89012'),
+(9, 9, 'CORECON90123'),
+(10, 10, 'CREA01234');
 
 -- Inserindo dados na tabela TP_Avaliacao
 INSERT INTO TP_Avaliacao (Descricao) VALUES
@@ -87,12 +131,19 @@ INSERT INTO Cliente (id_Usuario, Data_Admissao_Cliente) VALUES
 (7, '2021-07-10'),
 (8, '2021-08-10'),
 (9, '2021-09-10'),
-(10, '2021-10-10');
-
-
+(10, '2021-10-10'),
+(11, '2021-11-10'),
+(12, '2021-12-10'),
+(13, '2022-01-10'),
+(14, '2022-02-10'),
+(15, '2022-03-10'),
+(16, '2022-04-10'),
+(17, '2022-05-10'),
+(18, '2022-06-10'),
+(19, '2022-07-10'),
+(20, '2022-08-10');
 
 -- Inserindo dados na tabela Agendamento
--- Inserindo dados na tabela Agendamento com o campo status_Agendamento
 INSERT INTO Agendamento (id_Cliente, id_Profissional, data_Agendamento, Preco, status_Agendamento) VALUES
 (1, 1, '2021-06-01 09:00:00', 100, 'Confirmado'),
 (2, 2, '2021-06-02 10:00:00', 150, 'Pendente'),
@@ -106,8 +157,42 @@ INSERT INTO Agendamento (id_Cliente, id_Profissional, data_Agendamento, Preco, s
 (10, 5, '2021-11-05 13:00:00', 130, 'Cancelado'),
 (6, 3, '2021-12-06 09:00:00', 140, 'Confirmado'),
 (7, 4, '2021-11-07 10:00:00', 150, 'Pendente'),
-(8, 5, '2021-10-08 11:00:00', 175, 'Confirmado');
-
+(8, 5, '2021-10-08 11:00:00', 175, 'Confirmado'),
+(1, 1, '2021-07-10 10:00:00', 110, 'Confirmado'),
+(2, 1, '2021-07-11 11:00:00', 120, 'Confirmado'),
+(3, 2, '2021-07-12 12:00:00', 130, 'Pendente'),
+(4, 2, '2021-07-13 13:00:00', 140, 'Confirmado'),
+(5, 3, '2021-07-14 14:00:00', 150, 'Confirmado'),
+(6, 3, '2021-07-15 15:00:00', 160, 'Cancelado'),
+(7, 4, '2021-07-16 16:00:00', 170, 'Confirmado'),
+(8, 4, '2021-07-17 17:00:00', 180, 'Confirmado'),
+(9, 5, '2021-07-18 18:00:00', 190, 'Confirmado'),
+(10, 5, '2021-07-19 19:00:00', 200, 'Pendente'),
+(6, 1, '2021-07-20 09:00:00', 125, 'Confirmado'),
+(7, 2, '2021-07-21 10:00:00', 135, 'Confirmado'),
+(8, 3, '2021-07-22 11:00:00', 145, 'Confirmado'),
+(9, 4, '2021-07-23 12:00:00', 155, 'Confirmado'),
+(10, 5, '2021-07-24 13:00:00', 165, 'Confirmado'),
+(11, 6, '2022-04-01 09:00:00', 180, 'Confirmado'),
+(12, 7, '2022-04-02 10:00:00', 190, 'Confirmado'),
+(13, 8, '2022-04-03 11:00:00', 200, 'Pendente'),
+(14, 9, '2022-04-04 12:00:00', 210, 'Confirmado'),
+(15, 10, '2022-04-05 13:00:00', 220, 'Confirmado'),
+(16, 2, '2022-05-01 09:00:00', 130, 'Confirmado'),
+(17, 3, '2022-05-02 10:00:00', 140, 'Pendente'),
+(18, 4, '2022-05-03 11:00:00', 150, 'Confirmado'),
+(19, 5, '2022-05-04 12:00:00', 160, 'Confirmado'),
+(20, 1, '2022-05-05 13:00:00', 170, 'Confirmado'),
+(6, 6, '2022-06-01 09:00:00', 180, 'Confirmado'),
+(7, 7, '2022-06-02 10:00:00', 190, 'Confirmado'),
+(8, 8, '2022-06-03 11:00:00', 200, 'Pendente'),
+(9, 9, '2022-06-04 12:00:00', 210, 'Confirmado'),
+(10, 10, '2022-06-05 13:00:00', 220, 'Confirmado'),
+(11, 6, '2022-07-01 09:00:00', 180, 'Confirmado'),
+(12, 7, '2022-07-02 10:00:00', 190, 'Confirmado'),
+(13, 8, '2022-07-03 11:00:00', 200, 'Pendente'),
+(14, 9, '2022-07-04 12:00:00', 210, 'Confirmado'),
+(15, 10, '2022-07-05 13:00:00', 220, 'Confirmado');
 
 -- Inserindo dados na tabela Atendimento
 INSERT INTO Atendimento (id_Agendamento, data_Atendimento) VALUES
@@ -123,7 +208,27 @@ INSERT INTO Atendimento (id_Agendamento, data_Atendimento) VALUES
 (10, '2021-11-05 13:30:00'),
 (11, '2021-12-06 09:30:00'),
 (12, '2021-11-07 10:30:00'),
-(13, '2021-10-08 11:30:00');
+(13, '2021-10-08 11:30:00'),
+(14, '2022-04-01 09:30:00'),
+(15, '2022-04-02 10:30:00'),
+(16, '2022-04-03 11:30:00'),
+(17, '2022-04-04 12:30:00'),
+(18, '2022-04-05 13:30:00'),
+(19, '2022-05-01 09:30:00'),
+(20, '2022-05-02 10:30:00'),
+(21, '2022-05-03 11:30:00'),
+(22, '2022-05-04 12:30:00'),
+(23, '2022-05-05 13:30:00'),
+(24, '2022-06-01 09:30:00'),
+(25, '2022-06-02 10:30:00'),
+(26, '2022-06-03 11:30:00'),
+(27, '2022-06-04 12:30:00'),
+(28, '2022-06-05 13:30:00'),
+(29, '2022-07-01 09:30:00'),
+(30, '2022-07-02 10:30:00'),
+(31, '2022-07-03 11:30:00'),
+(32, '2022-07-04 12:30:00'),
+(33, '2022-07-05 13:30:00');
 
 -- Inserindo dados na tabela Feedback
 INSERT INTO Feedback (id_Atendimento, Atendimento_Nota) VALUES
@@ -132,14 +237,34 @@ INSERT INTO Feedback (id_Atendimento, Atendimento_Nota) VALUES
 (3, 5),
 (4, 3),
 (5, 5),
-(6, 2),   -- Atendimento ruim
-(7, 4),   -- Atendimento bom
-(8, 5),   -- Atendimento excelente
-(9, 3),   -- Atendimento mediano
-(10, 1),  -- Atendimento muito ruim
-(11, 4),  -- Atendimento bom
-(12, 3),  -- Atendimento mediano
-(13, 2);  -- Atendimento ruim
+(6, 2),
+(7, 4),
+(8, 5),
+(9, 3),
+(10, 1),
+(11, 4),
+(12, 3),
+(13, 2),
+(14, 5),
+(15, 4),
+(16, 3),
+(17, 5),
+(18, 2),
+(19, 4),
+(20, 5),
+(21, 3),
+(22, 4),
+(23, 5),
+(24, 2),
+(25, 3),
+(26, 5),
+(27, 4),
+(28, 1),
+(29, 5),
+(30, 4),
+(31, 3),
+(32, 5),
+(33, 2);
 
 -- Inserindo dados na tabela Avaliacao
 INSERT INTO Avaliacao (id_TP_Avaliacao, id_Atendimento, Descricao) VALUES
@@ -155,24 +280,60 @@ INSERT INTO Avaliacao (id_TP_Avaliacao, id_Atendimento, Descricao) VALUES
 (5, 10, 'Insatisfeito com o serviço prestado.'),
 (1, 11, 'Atendimento rápido e eficiente.'),
 (2, 12, 'Demorou para atender, mas foi cordial.'),
-(3, 13, 'Pouca atenção ao detalhe, deixou a desejar.');
+(3, 13, 'Pouca atenção ao detalhe, deixou a desejar.'),
+(1, 14, 'Atendimento excelente, profissional muito competente.'),
+(2, 15, 'Chegou com pequeno atraso, mas foi atencioso.'),
+(3, 16, 'Qualidade do serviço mediana, pode melhorar.'),
+(4, 17, 'Muito profissional e dedicado.'),
+(5, 18, 'Não fiquei satisfeito com o resultado final.'),
+(1, 19, 'Atendimento cordial e eficiente.'),
+(2, 20, 'Pontual e prestativo.'),
+(3, 21, 'Boa qualidade, atendeu às expectativas.'),
+(4, 22, 'Profissionalismo acima da média.'),
+(5, 23, 'Muito satisfeito com o serviço prestado.'),
+(1, 24, 'Atendimento deixou a desejar, pouco atencioso.'),
+(2, 25, 'Atrasou bastante, precisa melhorar a pontualidade.'),
+(3, 26, 'Qualidade excepcional, recomendo.'),
+(4, 27, 'Profissional dedicado e comprometido.'),
+(5, 28, 'Insatisfeito com o resultado, não recomendo.'),
+(1, 29, 'Atendimento personalizado e eficiente.'),
+(2, 30, 'Chegou no horário e foi muito educado.'),
+(3, 31, 'Qualidade boa, mas pode melhorar alguns detalhes.'),
+(4, 32, 'Excelente profissional, muito qualificado.'),
+(5, 33, 'Serviço deixou a desejar, não atendeu às expectativas.');
 
-
+-- Inserindo dados na tabela Pagamento
 INSERT INTO Pagamento (id_Agendamento, id_Atendimento, id_Cliente, data_Agendamento, status_Pagamento, valor_Total, data_Transacao, status_Transacao) VALUES
-    (1, 1, 1, '2021-06-01 09:00:00', 'Pago', 100, '2021-06-01 09:35:00', 'Processada'),
-    (2, 2, 2, '2021-06-02 10:00:00', 'Pendente', 150, NULL, 'Nao Processada'),
-    (3, 3, 3, '2021-06-03 11:00:00', 'Pago', 200, '2021-06-03 11:45:00', 'Processada'),
-    (4, 4, 4, '2021-06-04 12:00:00', 'Cancelado', 250, NULL, 'Nao Processada'),
-    (5, 5, 5, '2021-06-05 13:00:00', 'Pago', 300, '2021-06-05 13:45:00', 'Processada'),
-    (6, 6, 6, '2021-07-01 09:00:00', 'Pago', 120, '2021-07-01 09:45:00', 'Processada'),
-    (7, 7, 7, '2021-08-02 10:00:00', 'Pendente', 160, NULL, 'Nao Processada'),
-    (8, 8, 8, '2021-09-03 11:00:00', 'Pago', 220, '2021-09-03 11:45:00', 'Processada'),
-    (9, 9, 9, '2021-10-04 12:00:00', 'Pendente', 180, NULL, 'Nao Processada'),
-    (10, 10, 10, '2021-11-05 13:00:00', 'Cancelado', 130, NULL, 'Nao Processada'),
-    (11, 11, 6, '2021-12-06 09:00:00', 'Pago', 140, '2021-12-06 09:45:00', 'Processada'),
-    (12, 12, 7, '2021-11-07 10:00:00', 'Pendente', 150, NULL, 'Nao Processada'),
-    (13, 13, 8, '2021-10-08 11:00:00', 'Pago', 175, '2021-10-08 11:45:00', 'Processada');
-
-
-
-
+(1, 1, 1, '2021-06-01 09:00:00', 'Pago', 100, '2021-06-01 09:35:00', 'Processada'),
+(2, 2, 2, '2021-06-02 10:00:00', 'Pendente', 150, NULL, 'Não Processada'),
+(3, 3, 3, '2021-06-03 11:00:00', 'Pago', 200, '2021-06-03 11:45:00', 'Processada'),
+(4, 4, 4, '2021-06-04 12:00:00', 'Cancelado', 250, NULL, 'Não Processada'),
+(5, 5, 5, '2021-06-05 13:00:00', 'Pago', 300, '2021-06-05 13:45:00', 'Processada'),
+(6, 6, 6, '2021-07-01 09:00:00', 'Pago', 120, '2021-07-01 09:45:00', 'Processada'),
+(7, 7, 7, '2021-08-02 10:00:00', 'Pendente', 160, NULL, 'Não Processada'),
+(8, 8, 8, '2021-09-03 11:00:00', 'Pago', 220, '2021-09-03 11:45:00', 'Processada'),
+(9, 9, 9, '2021-10-04 12:00:00', 'Pendente', 180, NULL, 'Não Processada'),
+(10, 10, 10, '2021-11-05 13:00:00', 'Cancelado', 130, NULL, 'Não Processada'),
+(11, 11, 6, '2021-12-06 09:00:00', 'Pago', 140, '2021-12-06 09:45:00', 'Processada'),
+(12, 12, 7, '2021-11-07 10:00:00', 'Pendente', 150, NULL, 'Não Processada'),
+(13, 13, 8, '2021-10-08 11:00:00', 'Pago', 175, '2021-10-08 11:45:00', 'Processada'),
+(14, 14, 11, '2022-04-01 09:00:00', 'Pago', 180, '2022-04-01 09:35:00', 'Processada'),
+(15, 15, 12, '2022-04-02 10:00:00', 'Pago', 190, '2022-04-02 10:35:00', 'Processada'),
+(16, 16, 13, '2022-04-03 11:00:00', 'Pendente', 200, NULL, 'Não Processada'),
+(17, 17, 14, '2022-04-04 12:00:00', 'Pago', 210, '2022-04-04 12:35:00', 'Processada'),
+(18, 18, 15, '2022-04-05 13:00:00', 'Pago', 220, '2022-04-05 13:35:00', 'Processada'),
+(19, 19, 16, '2022-05-01 09:00:00', 'Pago', 130, '2022-05-01 09:35:00', 'Processada'),
+(20, 20, 17, '2022-05-02 10:00:00', 'Pendente', 140, NULL, 'Não Processada'),
+(21, 21, 18, '2022-05-03 11:00:00', 'Pago', 150, '2022-05-03 11:35:00', 'Processada'),
+(22, 22, 19, '2022-05-04 12:00:00', 'Pago', 160, '2022-05-04 12:35:00', 'Processada'),
+(23, 23, 20, '2022-05-05 13:00:00', 'Pago', 170, '2022-05-05 13:35:00', 'Processada'),
+(24, 24, 6, '2022-06-01 09:00:00', 'Pago', 180, '2022-06-01 09:35:00', 'Processada'),
+(25, 25, 7, '2022-06-02 10:00:00', 'Pago', 190, '2022-06-02 10:35:00', 'Processada'),
+(26, 26, 8, '2022-06-03 11:00:00', 'Pendente', 200, NULL, 'Não Processada'),
+(27, 27, 9, '2022-06-04 12:00:00', 'Pago', 210, '2022-06-04 12:35:00', 'Processada'),
+(28, 28, 10, '2022-06-05 13:00:00', 'Pago', 220, '2022-06-05 13:35:00', 'Processada'),
+(29, 29, 11, '2022-07-01 09:00:00', 'Pago', 180, '2022-07-01 09:35:00', 'Processada'),
+(30, 30, 12, '2022-07-02 10:00:00', 'Pago', 190, '2022-07-02 10:35:00', 'Processada'),
+(31, 31, 13, '2022-07-03 11:00:00', 'Pendente', 200, NULL, 'Não Processada'),
+(32, 32, 14, '2022-07-04 12:00:00', 'Pago', 210, '2022-07-04 12:35:00', 'Processada'),
+(33, 33, 15, '2022-07-05 13:00:00', 'Pago', 220, '2022-07-05 13:35:00', 'Processada');
