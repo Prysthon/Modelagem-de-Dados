@@ -115,7 +115,7 @@ INSERT INTO Profissional_Credencial (id_Profissional, id_Credencial, Codigo) VAL
 (7, 2, 'NUTR78901'),
 (8, 2, 'NUTR89012'),
 (9, 2, 'NUTR90123'),
-(10, 2, 'NUTR01234'),
+(10, 3, 'FISIO12345'),
 (11, 3, 'FISIO98765'),
 (12, 3, 'FISIO87654'),
 (13, 3, 'FISIO76543');
